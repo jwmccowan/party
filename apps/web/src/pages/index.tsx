@@ -1,8 +1,9 @@
-import { Button, Container } from "@chakra-ui/react";
+import { Button, Container, Image, Text, useColorMode } from "@chakra-ui/react";
 import Head from "next/head";
-import { Card } from "../components";
+import { Card } from "../components/Card";
 
 export default function Home() {
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <div>
       <Head>
@@ -13,8 +14,16 @@ export default function Home() {
 
       <main>
         <Container>
-          <Button>Test Me</Button>
-          <Card>Hello</Card>
+          <Button onClick={toggleColorMode}>Test Me</Button>
+          <Card>
+            <Image
+              src="https://thispersondoesnotexist.com/image"
+              h={120}
+              w={120}
+              borderRadius="full"
+            />
+            <Text as="h2">Jordan McDonough</Text>
+          </Card>
         </Container>
       </main>
     </div>
