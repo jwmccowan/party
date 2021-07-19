@@ -1,5 +1,6 @@
-import { Button } from "@chakra-ui/react";
+import { Button, Container } from "@chakra-ui/react";
 import Head from "next/head";
+import { Card } from "../components";
 
 export default function Home() {
   return (
@@ -11,7 +12,10 @@ export default function Home() {
       </Head>
 
       <main>
-        <Button>Test Me</Button>
+        <Container>
+          <Button>Test Me</Button>
+          <Card>Hello</Card>
+        </Container>
       </main>
     </div>
   );

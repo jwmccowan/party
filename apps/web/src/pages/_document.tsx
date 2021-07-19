@@ -1,5 +1,6 @@
 import { ColorModeScript } from "@chakra-ui/react";
 import Document, { Head, Html, Main, NextScript } from "next/document";
+import theme from "@party/theme";
 
 export default class PartyDocument extends Document {
   static getInitialProps(ctx: any) {
@@ -29,7 +30,7 @@ export default class PartyDocument extends Document {
           />
         </Head>
         <body>
-          <ColorModeScript initialColorMode="light" />
+          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
           <NextScript />
         </body>
