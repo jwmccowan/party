@@ -3,7 +3,7 @@ import { ComponentStyleConfig } from "@chakra-ui/react";
 export const Card: ComponentStyleConfig = {
   baseStyle: ({ colorMode }) => ({
     alignItems: "center",
-    background: colorMode === "dark" ? "gray.600" : "white",
+    background: colorMode === "dark" ? "gray.700" : "white",
     boxShadow: "lg",
     display: "flex",
     flexDirection: "column",

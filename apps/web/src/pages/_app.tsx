@@ -1,12 +1,13 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import theme from "@party/theme";
+import theme from "@plunder/theme";
 import { AppProps } from "next/app";
+import ThemeProvider from "components/ThemeProvider";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
+    <ThemeProvider cookies={pageProps.cookies}>
       <Component {...pageProps} />
-    </ChakraProvider>
+    </ThemeProvider>
   );
 }
 export default MyApp;
